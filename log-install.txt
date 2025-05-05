@@ -12,8 +12,8 @@
    - DROPBEAR                : 109, 143
    - OHP SSH                 : 8686
    - OHP OPENVPN             : 8787
-   - SSH WS TLS              : 8443
-   - SSH WS NTLS             : 8880
+   - SSH WS TLS              : 443
+   - SSH WS NTLS             : 80
 
     [INFORMATION SQUID,BADVPN,NGINX]
     --------------------------------
