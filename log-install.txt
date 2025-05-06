@@ -27,8 +27,6 @@
 
     [INFORMATION XRAY]
     ------------------
-
-
    - TROJAN WS TLS           : 443
    - VLESS TCP XTLS          : 443
    - VMESS/VLESS WS TLS      : 443
