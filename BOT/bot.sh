@@ -69,7 +69,7 @@ systemctl start kyt
 systemctl enable kyt
 systemctl restart kyt
 cd /root
-rm -rf kyt.sh
+rm -rf kyt.zip
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="

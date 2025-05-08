@@ -36,20 +36,20 @@ Button.inline(" OTHER SETTING ","setting")],
 		city = subprocess.check_output(citsy, shell=True).decode("ascii")
 
 		msg = f"""
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 
-**ðŸ¾ðŸ•Šï¸ ADMIN PANEL MENU ðŸ•Šï¸ðŸ¾**
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 
-**Â» OS     :** `{namaos.strip().replace('"','')}`
-**Â» CITY :** `{city.strip()}`
-**Â» DOMAIN :** `{DOMAIN}`
-**Â» IP VPS :** `{ipsaya.strip()}`
-**Â» Total Account Created:** 
+━━━━━━━━━━━━━━━━━━━━━━━ 
+**🐾🕊️ ADMIN PANEL MENU 🕊️🐾**
+━━━━━━━━━━━━━━━━━━━━━━━ 
+**» OS     :** `{namaos.strip().replace('"','')}`
+**» CITY :** `{city.strip()}`
+**» DOMAIN :** `{DOMAIN}`
+**» IP VPS :** `{ipsaya.strip()}`
+**» Total Account Created:** 
 
-**Â» ðŸŸ¢SSH OVPN    :** `{ssh.strip()}` __account__
-**Â» ðŸŸ¢XRAY VMESS  :** `{vms.strip()}` __account__
-**Â» ðŸŸ¢XRAY VLESS  :** `{vls.strip()}` __account__
-**Â» ðŸŸ¢XRAY TROJAN :** `{trj.strip()}` __account__
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 
+**» 🟢SSH OVPN    :** `{ssh.strip()}` __account__
+**» 🟢XRAY VMESS  :** `{vms.strip()}` __account__
+**» 🟢XRAY VLESS  :** `{vls.strip()}` __account__
+**» 🟢XRAY TROJAN :** `{trj.strip()}` __account__
+━━━━━━━━━━━━━━━━━━━━━━━ 
 """
 		x = await event.edit(msg,buttons=inline)
 		if not x:
