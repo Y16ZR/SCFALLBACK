@@ -14,6 +14,7 @@
    - OHP OPENVPN             : 8787
    - SSH WS TLS              : 443
    - SSH WS NTLS             : 80
+   - SSH UDP CUSTOM          : 1-65535
 
     [INFORMATION SQUID,BADVPN,NGINX]
     --------------------------------
