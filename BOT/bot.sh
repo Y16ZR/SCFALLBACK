@@ -7,6 +7,10 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
+
+rm -fr bot.sh
+rm -fr /usr/bin/kyt
+rm -fr /usr/bin/bot.zip*
 #install
 apt update && apt upgrade
 apt install python3 python3-pip git
@@ -62,11 +66,13 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 END
-systemctl start kyt 
-systemctl enable kyt
-systemctl restart kyt
-rm -rf kyt.zip
-cd /root
+systemctl daemon-reload
+systemctl start xbot
+systemctl enable xbot
+systemctl restart xbot
+cd
+rm -fr /usr/bin/bot.zip
+rm -fr /usr/bin/kyt.zip
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
