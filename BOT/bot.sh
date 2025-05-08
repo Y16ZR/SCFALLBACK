@@ -64,12 +64,11 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 END
-systemctl daemon-reload
 systemctl start kyt 
 systemctl enable kyt
 systemctl restart kyt
-cd /root
 rm -rf kyt.zip
+cd /root
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
