@@ -1,17 +1,12 @@
 from kyt import *
 
-@bot.on(events.NewMessage(pattern=r"(?:.menu|/menu)$"))
-@bot.on(events.CallbackQuery(data=b'menu'))
-async def menu(event):
+@bot.on(events.NewMessage(pattern=r"(?:.start|/start)$"))
+@bot.on(events.CallbackQuery(data=b'start'))
+async def start(event):
 	inline = [
-[Button.inline(" SSH & OVPN MENU ","ssh")],
-[Button.inline(" VMESS WS MENU ","vmess"),
-Button.inline(" VLESS WS MENU ","vless")],
-Button.inline(" VLESS XTLS MENU ","vless")],
-[Button.inline(" TROJAN WS MENU ","trojan"),
-[Button.inline(" CHECK VPS INFO ","info"),
-Button.inline(" OTHER SETTING ","setting")],
-[Button.inline(" ‹ Back Menu › ","start")]]
+[Button.inline("PANEL CREATE ACCOUNT","menu")],
+[Button.url("TELEGRAM GROUP","https://t.me/myridtunnel"),
+Button.url("ORDER SCRIPT","https://t.me/kytxz")]]
 	sender = await event.get_sender()
 	val = valid(str(sender.id))
 	if val == "false":
@@ -32,27 +27,24 @@ Button.inline(" OTHER SETTING ","setting")],
 		namaos = subprocess.check_output(sdss, shell=True).decode("ascii")
 		ipvps = f" curl -s ipv4.icanhazip.com"
 		ipsaya = subprocess.check_output(ipvps, shell=True).decode("ascii")
-		citsy = f" cat /usr/bin/detailserver.conf"
+		citsy = f" cat /etc/xray/city"
 		city = subprocess.check_output(citsy, shell=True).decode("ascii")
 
 		msg = f"""
-━━━━━━━━━━━━━━━━━ 
-** ADMIN PANEL MENU **
-━━━━━━━━━━━━━━━━━ 
-**» OS     :** `{namaos.strip().replace('"','')}`
-**» CITY :** `{city.strip()}`
-**» DOMAIN :** `{DOMAIN}`
-**» IP VPS :** `{ipsaya.strip()}`
-**» Total Account Created:** 
-
-**» 🟢SSH OVPN    :** `{ssh.strip()}` __account__
-**» 🟢XRAY VMESS  :** `{vms.strip()}` __account__
-**» 🟢XRAY VLESS  :** `{vls.strip()}` __account__
-**» 🟢XRAY TROJAN :** `{trj.strip()}` __account__
-━━━━━━━━━━━━━━━━━ 
+━━━━━━━━━━━━━━━━━━━━━━━ 
+**🐾🕊️ PREMIUM PANEL MENU 🕊️🐾**
+━━━━━━━━━━━━━━━━━━━━━━━ 
+🔰 **» OS     :** `{namaos.strip().replace('"','')}`
+🔰 **» CITY :** `{city.strip()}`
+🔰 **» DOMAIN :** `{DOMAIN}`
+🔰 **» IP VPS :** `{ipsaya.strip()}`
+━━━━━━━━━━━━━━━━━━━━━━━
 """
 		x = await event.edit(msg,buttons=inline)
 		if not x:
 			await event.reply(msg,buttons=inline)
+
+
+
 
 

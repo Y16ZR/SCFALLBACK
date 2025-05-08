@@ -67,9 +67,9 @@ Restart=always
 WantedBy=multi-user.target
 END
 systemctl daemon-reload
-systemctl start xbot
-systemctl enable xbot
-systemctl restart xbot
+systemctl start kyt
+systemctl enable kyt
+systemctl restart kyt
 cd
 rm -fr /usr/bin/bot.zip
 rm -fr /usr/bin/kyt.zip
