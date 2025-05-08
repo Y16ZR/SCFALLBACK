@@ -3,6 +3,8 @@ NS=$( cat /etc/slowdns/infons)
 PUB=$( cat /root/server.pub )
 domain=$(cat /usr/local/etc/xray/domain)
 MYIP=$(curl -sS ipv4.icanhazip.com)
+
+rm -r /usr/bin/kyt
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
