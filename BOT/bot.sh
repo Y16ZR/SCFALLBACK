@@ -4,7 +4,6 @@ PUB=$( cat /root/server.pub )
 domain=$(cat /usr/local/etc/xray/domain)
 MYIP=$(curl -sS ipv4.icanhazip.com)
 
-rm -rf /usr/bin/kyt
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
@@ -20,7 +19,6 @@ rm -rf bot.zip
 clear
 wget https://raw.githubusercontent.com/Y16ZR/SCFALLBACK/main/BOT/kyt.zip
 unzip kyt.zip
-
 pip3 install -r kyt/requirements.txt
 
 clear
