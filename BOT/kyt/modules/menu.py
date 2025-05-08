@@ -4,11 +4,11 @@ from kyt import *
 @bot.on(events.CallbackQuery(data=b'menu'))
 async def menu(event):
 	inline = [
-[Button.inline(" SSH & OVPN MENU ","ssh")],
-[Button.inline(" VMESS WS MENU ","vmess"),
-Button.inline(" VLESS WS MENU ","vless")],
-Button.inline(" VLESS XTLS MENU ","vless")],
-[Button.inline(" TROJAN WS MENU ","trojan"),
+[Button.inline(" SSH OVPN MANAGER ","ssh")],
+[Button.inline(" VMESS MANAGER ","vmess"),
+Button.inline(" VLESS MANAGER ","vless")],
+[Button.inline(" TROJAN MANAGER ","trojan"),
+Button.inline(" SHDWSK MANAGER ","shadowsocks")],
 [Button.inline(" CHECK VPS INFO ","info"),
 Button.inline(" OTHER SETTING ","setting")],
 [Button.inline(" ‹ Back Menu › ","start")]]
@@ -37,7 +37,7 @@ Button.inline(" OTHER SETTING ","setting")],
 
 		msg = f"""
 ━━━━━━━━━━━━━━━━━ 
-** ADMIN PANEL MENU **
+** ▶ ADMIN PANEL MENU ◀ **
 ━━━━━━━━━━━━━━━━━ 
 **» OS     :** `{namaos.strip().replace('"','')}`
 **» CITY :** `{city.strip()}`

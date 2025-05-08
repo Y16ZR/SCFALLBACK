@@ -14,7 +14,7 @@ rm -fr /usr/bin/bot.zip*
 #install
 apt update && apt upgrade
 apt install python3 python3-pip git
-cd /usr/bin
+cd
 wget https://raw.githubusercontent.com/Y16ZR/SCFALLBACK/main/BOT/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
