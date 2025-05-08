@@ -1,8 +1,7 @@
 #!/bin/bash
-NS=$( cat /etc/slowdns/infons)
+NS=$( /etc/slowdns/infons)
 PUB=$( cat /root/server.pub )
 domain=$(cat /usr/local/etc/xray/domain)
-MYIP=$(curl -sS ipv4.icanhazip.com)
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
@@ -37,9 +36,7 @@ echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/kyt/var.txt
 echo -e ADMIN='"'$admin'"' >> /usr/bin/kyt/var.txt
 echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
 echo -e PUB='"'$PUB'"' >> /usr/bin/kyt/var.txt
-echo -e NS='"'$NS'"' >> /usr/bin/kyt/var.txt
-echo -e IP='"'$MYIP'"' >> /usr/bin/kyt/var.txt
-echo -e NS='"'$NS'"' >> /usr/bin/kyt/var.txt
+echo -e HOST='"'$NS'"' >> /usr/bin/kyt/var.txt
 clear
 
 cat > /etc/systemd/system/kyt.service << END
@@ -64,12 +61,11 @@ rm -rf kyt.sh
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
-echo "Token Bot  : $bottoken"
-echo "Admin      : $admin"
-echo "Domain     : $domain"
-echo "Pub        : $PUB"
-echo "Nameserver : $NS"
-echo "Ip/Host    : $MYIP"
+echo "Token Bot         : $bottoken"
+echo "Admin          : $admin"
+echo "Domain        : $domain"
+echo "Pub            : $PUB"
+echo "Host           : $NS"
 echo -e "==============================="
 echo "Setting done"
 sleep 2
