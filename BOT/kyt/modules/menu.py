@@ -37,7 +37,7 @@ Button.inline(" OTHER SETTING ","setting")],
 
 		msg = f"""
 ━━━━━━━━━━━━━━━━━ 
-**🐾🕊️ ADMIN PANEL MENU 🕊️🐾**
+** ADMIN PANEL MENU **
 ━━━━━━━━━━━━━━━━━ 
 **» OS     :** `{namaos.strip().replace('"','')}`
 **» CITY :** `{city.strip()}`
