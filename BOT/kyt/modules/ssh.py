@@ -96,14 +96,14 @@ Button.inline(" 60 Day ","60")]])
 ** SSH SLOW DNS INFORMATION**
 **------------------------**
 **» Ssh Slow Dns Port:** `22,80,443,8080`
-**» Name Server(NS)  :** `{NS}`
+**» Name Server(NS)  :** `{HOST}`
 **» Public Key       :** `{PUB}`
 **━━━━━━━━━━━━━━━━━**
 ** CONFIG OPENVPN**
 **--------------**
-**» OpenVPN TCP : 1194** `http://{IP}:81/client-tcp-1194.ovpn`
-**» OpenVPN UDP : 2200** `http://{IP}:81/client-udp-2200.ovpn`
-**» OpenVPN OHP : 110** `http://{IP}:81/client-tcp-ohp1194.ovpn`
+**» OpenVPN TCP : 1194** `http://{MYIP}:81/client-tcp-1194.ovpn`
+**» OpenVPN UDP : 2200** `http://{MYIP}:81/client-udp-2200.ovpn`
+**» OpenVPN OHP : 110** `http://{MYIP}:81/client-tcp-ohp1194.ovpn`
 **━━━━━━━━━━━━━━━━━**
 **» PAYLOAD SSH WS TLS   :** `GET wss://bug.com/ HTTP/1.1[crlf]Host: {DOMAIN}[crlf]Upgrade: websocket[crlf][crlf]`
 **» PAYLOAD SSH WS NTLS  :** `GET / HTTP/1.1[crlf]Host: {DOMAIN}[crlf]Upgrade: websocket[crlf][crlf]`

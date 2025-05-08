@@ -4,7 +4,7 @@ PUB=$( cat /root/server.pub )
 domain=$(cat /usr/local/etc/xray/domain)
 MYIP=$(curl -sS ipv4.icanhazip.com)
 
-rm -r /usr/bin/kyt
+rm -fr /usr/bin/kyt
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
@@ -44,6 +44,12 @@ echo -e NS='"'$NS'"' >> /usr/bin/kyt/var.txt
 echo -e IP='"'$MYIP'"' >> /usr/bin/kyt/var.txt
 echo -e NS='"'$NS'"' >> /usr/bin/kyt/var.txt
 clear
+
+if [ -e /etc/systemd/system/kyt.service ]; then
+echo ""
+else
+rm -fr /etc/systemd/system/kyt.service
+fi
 
 cat > /etc/systemd/system/kyt.service << END
 [Unit]
