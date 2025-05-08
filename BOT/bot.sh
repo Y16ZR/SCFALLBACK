@@ -21,6 +21,7 @@ clear
 wget https://raw.githubusercontent.com/Y16ZR/SCFALLBACK/main/BOT/kyt.zip
 unzip kyt.zip
 rm -rf kyt.zip
+
 pip3 install -r kyt/requirements.txt
 
 clear
@@ -43,7 +44,6 @@ echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
 echo -e PUB='"'$PUB'"' >> /usr/bin/kyt/var.txt
 echo -e NS='"'$NS'"' >> /usr/bin/kyt/var.txt
 echo -e IP='"'$MYIP'"' >> /usr/bin/kyt/var.txt
-echo -e NS='"'$NS'"' >> /usr/bin/kyt/var.txt
 clear
 
 if [ -e /etc/systemd/system/kyt.service ]; then
