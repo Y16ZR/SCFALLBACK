@@ -20,6 +20,7 @@ rm -rf bot.zip
 clear
 wget https://raw.githubusercontent.com/Y16ZR/SCFALLBACK/main/BOT/kyt.zip
 unzip kyt.zip
+rm -rf kyt.zip
 pip3 install -r kyt/requirements.txt
 
 clear
@@ -67,7 +68,7 @@ END
 systemctl start kyt 
 systemctl enable kyt
 systemctl restart kyt
-rm -rf kyt.zip
+
 cd /root
 echo "Done"
 echo "Your Data Bot"
