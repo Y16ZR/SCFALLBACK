@@ -21,6 +21,7 @@ mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
+cd /usr/bin
 wget https://raw.githubusercontent.com/Y16ZR/SCFALLBACK/main/BOT/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
