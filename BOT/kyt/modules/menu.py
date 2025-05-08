@@ -4,14 +4,14 @@ from kyt import *
 @bot.on(events.CallbackQuery(data=b'menu'))
 async def menu(event):
 	inline = [
-[Button.inline(" SSH OVPN MANAGER ","ssh")],
-[Button.inline(" VMESS MANAGER ","vmess"),
-Button.inline(" VLESS MANAGER ","vless")],
-[Button.inline(" TROJAN MANAGER ","trojan"),
-Button.inline(" SHDWSK MANAGER ","shadowsocks")],
+[Button.inline(" SSH & OVPN MENU ","ssh")],
+[Button.inline(" VMESS WS MENU ","vmess"),
+Button.inline(" VLESS WS MENU ","vless")],
+Button.inline(" VLESS XTLS MENU ","vless")],
+[Button.inline(" TROJAN WS MENU ","trojan"),
 [Button.inline(" CHECK VPS INFO ","info"),
 Button.inline(" OTHER SETTING ","setting")],
-[Button.inline(" â€¹ Back Menu â€º ","start")]]
+[Button.inline(" ‹ Back Menu › ","start")]]
 	sender = await event.get_sender()
 	val = valid(str(sender.id))
 	if val == "false":
@@ -36,9 +36,9 @@ Button.inline(" OTHER SETTING ","setting")],
 		city = subprocess.check_output(citsy, shell=True).decode("ascii")
 
 		msg = f"""
-━━━━━━━━━━━━━━━━━━━━━━━ 
+━━━━━━━━━━━━━━━━━ 
 **🐾🕊️ ADMIN PANEL MENU 🕊️🐾**
-━━━━━━━━━━━━━━━━━━━━━━━ 
+━━━━━━━━━━━━━━━━━ 
 **» OS     :** `{namaos.strip().replace('"','')}`
 **» CITY :** `{city.strip()}`
 **» DOMAIN :** `{DOMAIN}`
@@ -49,7 +49,7 @@ Button.inline(" OTHER SETTING ","setting")],
 **» 🟢XRAY VMESS  :** `{vms.strip()}` __account__
 **» 🟢XRAY VLESS  :** `{vls.strip()}` __account__
 **» 🟢XRAY TROJAN :** `{trj.strip()}` __account__
-━━━━━━━━━━━━━━━━━━━━━━━ 
+━━━━━━━━━━━━━━━━━ 
 """
 		x = await event.edit(msg,buttons=inline)
 		if not x:
