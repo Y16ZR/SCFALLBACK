@@ -33,6 +33,7 @@ echo -e ""
 echo -e ""
 read -e -p "[*] Input your Bot Token :  " bottoken
 read -e -p "[*] Input Your Id Telegram :  " admin
+rm -f /usr/bin/kyt/var.txt
 echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/kyt/var.txt
 echo -e ADMIN='"'$admin'"' >> /usr/bin/kyt/var.txt
 echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
