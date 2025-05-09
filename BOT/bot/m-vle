@@ -1,0 +1,209 @@
+#!/bin/bash
+
+BlueCyan='\e[5;36m'
+Xark='\e[0m'
+ungu='\033[0;35m'
+yellow='\e[33m'
+WhiteBe='\e[5;37m'
+GreenBe='\e[5;32m'
+BlueCyan='\e[5;36m'
+Xark='\e[0m'
+r="\033[1;91m"
+BG_BLU="\033[44;1m" # BG BIRU
+GREN="\033[92m"
+clear
+
+# Valid Script
+ipsaya=$(curl -sS ipv4.icanhazip.com)
+data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+date_list=$(date +"%Y-%m-%d" -d "$data_server")
+data_ip="https://raw.githubusercontent.com/Alimondpc/izin/main/ip"
+checking_sc() {
+  useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
+  if [[ $date_list < $useexp ]]; then
+    echo -ne
+  else
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    echo -e "\033[42m          404 NOT FOUND AUTOSCRIPT          \033[0m"
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    echo -e ""
+    echo -e "            \033[91;1mPERMISSION DENIED !\033[0m"
+    echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
+    echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
+    echo -e "             \033[0;33mContact Admin :\033[0m"
+	echo -e "      \033[2;32mTelegram\033[0m t.me/LionKingVPN"
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    exit
+  fi
+}
+checking_sc
+clear
+
+function xVMESS() {
+  echo -e     " ${BG_BLU}               XRAY VMESS              ${Xark} "
+}
+
+# . 1 Membuat Account Vmess
+function Create_Account() {
+  add-vme
+}
+
+# . 2 Membuat Account Triall Vmess
+function Create_Trial() {
+  trial-vme
+}
+
+# . 3 Menghapus Account Vmess
+function Delete_Account() {
+  del-vme
+}
+
+# . 4 Melihat Daftar Member
+function List_Member() {
+  member-vme
+}
+
+# . 5  Me Renew Account
+function Renew_Account() {
+  renew-vme
+}
+
+# . 6 Melihat details Account
+function Check_Account() {
+  cek-vme
+}
+
+# . 7  Merubah Quota Usee Vmess
+function Changes_Limit_Quota() {
+  change-vmess-qouta
+}
+# . 8 Meeubah Ip Limit User Vmess
+function Change_Ip_Vmess() {
+  ganti-ip-vmess
+}
+
+# . 9 Merubah Limit Ip Xray
+function Changes_Limit_Xray() {
+  change-limit-xray
+}
+
+# . 10 Check Config
+function Detail_Config_Vmess() {
+  check-vme
+}
+  
+# . 11 Membuat Account Vmess
+function Create_Account_Vless() {
+  add-vle
+}
+
+# . 12 Membuat Account Triall Vmess
+function Create_Trial_Vless() {
+  trial-vle
+}
+
+# . 13 Menghapus Account Vmess
+function Delete_Account_Vless() {
+  del-vle
+}
+
+# . 14 Melihat Daftar Member
+function List_Member_Vless() {
+  member-vle
+}
+
+# . 15  Me Renew Account
+function Renew_Account_Vless() {
+  renew-vle
+}
+
+# . 16 Melihat details Account
+function Check_User_Login() {
+  cek-vle
+}
+
+# . 17  Merubah Quota Usee Vmess
+function Changes_Limit_Quota_Vless() {
+  change-vless-qouta
+}
+# . 18 Meeubah Ip Limit User Vmess
+function Change_Ip_Vless() {
+  ganti-ip-vless
+}
+
+# . 19 Merubah Limit Ip Xray
+function Changes_Limit_Xray() {
+  change-limit-xray
+}
+
+# . 20 Check Config
+function Detail_Config_Vless() {
+  check-vle
+}
+
+# . 21 Check Config
+function Lock_Account_Vmess() {
+  lock-vm
+}
+
+# . 22 Check Config
+function Unlock_Account_Vmess() {
+  unlock-vm
+}
+
+# . 23 Check Config
+function Lock_Account_Vless() {
+  lock-vl
+}
+
+# . 24 Check Config
+function Unlock_Account_Vless() {
+  unlock-vl
+}
+
+# . 25 Check Config
+function Recovery_Vmess() {
+  recover-vm
+}
+
+# . 26 Check Config
+function Recovery_Vless() {
+  recover-vl
+}
+
+
+# . Daftar Menu Vmess
+function Menu_Features() {
+echo -e " \033[96;1m╭════════════════════════════════════════════════════╮"
+echo -e " \033[96;1m│\e[0m                   \033[1;37mVLESS PANEL MENU                 \e[96;1m│\e[0m"
+echo -e " \033[96;1m╰════════════════════════════════════════════════════╯"
+echo -e " \033[96;1m╭════════════════════════════════════════════════════╮"
+echo -e " \033[96;1m│ $NC \033[1;37m[\033[96;1m01\033[1;37m] \033[96;1m• \033[1;37mADD AKUN         \033[1;37m[\033[96;1m06\033[1;37m] \033[96;1m• \033[1;37mCEK USER CONFIG    \033[96;1m│ $NC"
+echo -e " \033[96;1m│ $NC \033[1;37m[\033[96;1m02\033[1;37m] \033[96;1m• \033[1;37mTRIAL AKUN       \033[1;37m[\033[96;1m07\033[1;37m] \033[96;1m• \033[1;37mCHANGE USER LIMIT  \033[96;1m│ $NC"
+echo -e " \033[96;1m│ $NC \033[1;37m[\033[96;1m03\033[1;37m] \033[96;1m• \033[1;37mRENEW AKUN       \033[1;37m[\033[96;1m08\033[1;37m] \033[96;1m• \033[1;37mCHANGE USER KUOTA  \033[96;1m│ $NC"
+echo -e " \033[96;1m│ $NC \033[1;37m[\033[96;1m04\033[1;37m] \033[96;1m• \033[1;37mDELETE AKUN      \033[1;37m[\033[96;1m09\033[1;37m] \033[96;1m• \033[1;37mLOCK USER          \033[96;1m│ $NC"
+echo -e " \033[96;1m│ $NC \033[1;37m[\033[96;1m05\033[1;37m] \033[96;1m• \033[1;37mCEK USER LOGIN   \033[1;37m[\033[96;1m10\033[1;37m] \033[96;1m• \033[1;37mUNLOCK USER        \033[96;1m│ $NC"
+echo -e " \033[96;1m│ $NC \033[1;37m[\033[96;1m00\033[1;37m] \033[96;1m• \033[1;37mGO BACK          \033[1;37m[\033[96;1m11\033[1;37m] \033[96;1m• \033[1;37mRESTORE AKUN       \033[96;1m│ $NC"
+echo -e " \033[96;1m╰════════════════════════════════════════════════════╯"
+echo -e " \033[96;1m╭═════════════════════════ \033[1;37mBY${NC} \033[96;1m═══════════════════════╮"
+printf "                    \033[96;1m%3s${NC} \033[1;37m%0s${NC} \033[96;1m%3s${NC}\n" "• " "$(cat /etc/xray/username)" " •"
+echo -e " \033[96;1m╰════════════════════════════════════════════════════╯"
+}
+
+Menu_Features
+read -p "Select From Options [1-25] :  " Ltt
+case $Ltt in
+1) clear ; add-vle ;;
+2) clear ; trial-vle ;;
+3) clear ; renew-vle ;;
+4) clear ; del-vle ;;
+5) clear ; cek-vle ;;
+6) clear ; check-vle ;;
+7) clear ; ganti-ip-vless ;;
+8) clear ; change-vless-qouta ;;
+9) clear ; lock-vl ;;
+10) clear ; unlock-vl ;;
+11) clear ; recover-vl ;;
+0) clear ; menu ;;
+*) clear ; m-vle;;
+esac

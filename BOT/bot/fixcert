@@ -1,13 +1,4 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Gemilangkinasih࿐
-# Email      » gemilangkinasih@gmail.com
-# telegram   » https://t.me/gemilangkinasih
-# whatsapp   » wa.me/+628984880039
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Gemilangkinasih࿐
-
 DF='\e[39m'
 Bold='\e[1m'
 Blink='\e[5m'
@@ -44,11 +35,11 @@ KEY="$KEY"
 TIME="$TIME"
 URL="$URL"
 TEXT="
-<code>━━━━━━━━━━━━━━━━━━━━</code>
+<code>====================</code>
 <code>Notif Pasang SSL    </code>
-<code>━━━━━━━━━━━━━━━━━━━━</code>
-<code>PASANG SSL DONE࿐</code>
-<code>━━━━━━━━━━━━━━━━━━━━</code>
+<code>====================</code>
+<code>PASANG SSL DONE</code>
+<code>====================</code>
 "
 
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null

@@ -1,0 +1,212 @@
+#!/bin/bash
+
+BlueCyan='\e[5;36m'
+Xark='\e[0m'
+ungu='\033[35m'
+yellow='\e[33m'
+WhiteBe='\e[5;37m'
+GreenBe='\e[5;32m'
+BlueCyan='\e[5;36m'
+White="\033[97;1m"
+Green="\033[92;1m"
+Cyan="\033[96;1m"
+Xark='\e[0m'
+BG_BLU="\033[44;1m" # BG BIRU
+clear
+
+function print_success() {
+if [[ 0 -eq $? ]]; then
+echo -e "${BLUE} =============================== ${FONT}"
+echo -e "${Green} # $1 berhasil dipasang"
+echo -e "${BLUE} =============================== ${FONT}"
+sleep 2
+fi
+}
+function Rename() {
+clear
+echo -e "${YELLOW}----------------------------------------------------------${NC}"
+echo -e "\033[96;1m            Welcome To Script LionKingVPN              \033[0m"
+echo -e "${YELLOW}----------------------------------------------------------${NC}"
+echo ""
+sleep 3
+echo -e "    ----------------------------------"
+echo -e "   |\e[1;32mPlease Select a Options \e[0m|"
+echo -e "    ----------------------------------"
+echo -e "    \e[1;32m01)\e[0m Rename Script"
+echo -e "    \e[1;32m02)\e[0m Default "
+echo -e "   ------------------------------------"
+read -p "   Please select numbers 1-2 or Any Button(Default) : " host
+echo ""
+if [[ $host == "1" ]]; then
+clear
+echo ""
+echo ""
+echo -e "   \e[1;36m_______________________________$NC"
+echo -e "   \e[1;32m      CHANGES NAME SCRIPT $NC"
+echo -e "   \e[1;36m_______________________________$NC"
+echo -e ""
+read -p "   INPUT YOUR NAME :   " host1
+read -p "   INPUT PAS ADMIN :   " host11
+rm /etc/xray/username
+if [[ $host11 == @Ezq1usia ]]; then
+echo $host1 >> /etc/xray/username
+echo ""
+clear
+print_success "Rename Script"
+sleep 3
+menu
+else
+echo "LionKingVPN" > /etc/xray/username
+clear
+echo -e "${RED} Mohon Maaf Sepertinya Anda Bukan Owner ${NC}"
+sleep 3
+clear
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    echo -e "\033[42m          404 NOT FOUND AUTOSCRIPT          \033[0m"
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    echo -e ""
+    echo -e "            \033[91;1mPERMISSION DENIED !\033[0m"
+    echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
+    echo -e "             \033[0;33mContact Admin :\033[0m"
+	echo -e "      \033[2;32mTelegram\033[0m t.me/LionKingVPN"
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    sleep 3
+    print_success "Script Name Default"
+    sleep 2
+    menu
+fi
+elif [[ $host == "2" ]]; then
+rm /etc/xray/username
+echo "LionKingVPN" > /etc/xray/username
+clear
+print_success "Script Name Default"
+sleep 3
+menu
+fi
+}
+
+function baris_panjang() {
+  echo -e "${BlueCyan} ———————————————————————————————————————${Xark}"
+}
+function ATAS() {
+  echo -e     "${ungu}                FEATURES               ${Xark} "
+}
+
+function  FIXX() {
+  echo -e  " ${BG_BLU}               MENU FIXX              ${Xark}"
+}
+
+function  ADMIN() {
+  echo -e  " ${BG_BLU}               ADMIN AKSES              ${Xark}"
+}
+
+function  CLEAR() {
+  echo -e  " ${BG_BLU}               MENU CLEAR             ${Xark}"
+}
+
+
+function  INFORMATION() {
+  echo -e  " ${BG_BLU}              INFORMATION             ${Xark}"
+}
+
+
+function  OTHER() {
+  echo -e  " ${BG_BLU}                OTHER                 ${Xark}"
+}
+
+
+function Create_Bot_Notif() {
+  create-bot-notif
+}
+
+
+function Info_Port() {
+  prot
+}
+
+
+
+# Banner 
+function Banner(){
+clear
+baris_panjang
+ATAS
+baris_panjang
+}
+
+
+function Menu_Lambofgod() {
+baris_panjang
+echo -e " 01.) Running Service    "  
+echo -e " 02.) Restart Service    " 
+echo -e " 03.) Auto Reboot	  " 
+echo -e " 04.) Monitoring         " 
+echo -e " 05.) SpeedTest 		  "
+echo -e " 06.) Delete All Account Exp "
+baris_panjang
+ADMIN
+baris_panjang
+echo -e " 07.) Factory Reset      "
+echo -e " 08.) Register IPVPS "
+echo -e " 09.) Pointing Domain "
+echo -e " 10.) Riname Script "
+baris_panjang
+FIXX
+baris_panjang
+echo -e " 11.) Change Banner      "  
+echo -e " 12.) Change Domain      "  
+echo -e " 13.) Fixx Haproxy       "  
+echo -e " 14.) Fixx Domain        "  
+echo -e " 15.) Fix Akun Pada Bot  "  
+baris_panjang
+CLEAR
+baris_panjang
+echo -e " 16.) Clear Cache      "
+echo -e " 17.) Clear Logs       "
+echo -e " 18.) Clear Cache File "
+baris_panjang
+INFORMATION
+baris_panjang
+echo -e " 19.) Info Service Port  "
+echo -e " 20.) Information System "
+baris_panjang
+echo -e " 21.) Limit-on-off XRAY  "
+echo -e " 22.) Back to Menu"
+baris_panjang
+echo -e ""
+
+}
+
+function Select_Menu() {
+read -p "Select From Options [1-21] :  " NB
+case $NB in
+1) clear ; run ;;
+2) clear ; reset ;;
+3) clear ; autoreboot ;;
+4) clear ; gotop ;;
+5) clear ; speedtest ;;
+6) clear ; xp ;;
+7) clear ; Factreset ;;
+8) clear ; add-ip-bot ;;
+9) clear ; cf ;;
+10) clear ; Rename ;;
+11) clear ; nano /etc/banner.txt ;;
+12) clear ; change-domain ;;
+13) clear ; fixhap ;;
+14) clear ; fixcert ;;
+15) clear ; fixakunbot ;;
+16) clear ; clearcache ;;
+17) clear ; clearlog ;;
+18) clear ; delet-cache-file ;;
+19) clear ; Info_Port ;;
+20) clear ; about ;;
+21) clear ; limit-on-off ;;
+22) clear ; menu ;;
+*) clear ; exit ;;
+esac
+}
+
+
+Banner
+Menu_Lambofgod
+Select_Menu

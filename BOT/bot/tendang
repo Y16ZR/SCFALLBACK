@@ -1,14 +1,6 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Gemilangkinasih࿐
-# Email      » gemilangkinasih@gmail.com
-# telegram   » https://t.me/gemilangkinasih
-# whatsapp   » wa.me/+628984880039
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Gemilangkinasih࿐
-
 clear
+limitssh-ip
 MAX=1
 if [ -e "/var/log/auth.log" ]; then
         OS=1;
@@ -20,14 +12,11 @@ if [ -e "/var/log/secure" ]; then
 fi
 
 if [ $OS -eq 1 ]; then
-    userdel -f $user
 	service ssh restart > /dev/null 2>&1;
 fi
 if [ $OS -eq 2 ]; then
-    userdel -f $user
 	service sshd restart > /dev/null 2>&1;
 fi
-     userdel -f $user
 	service dropbear restart > /dev/null 2>&1;
 				
 if [[ ${1+x} ]]; then
@@ -97,14 +86,13 @@ fi
 			done
         if [ $j -gt 0 ]; then
                 if [ $OS -eq 1 ]; then
-                        userdel -f $user
                         service ssh restart > /dev/null 2>&1;
                 fi
                 if [ $OS -eq 2 ]; then
-                        userdel -f $user
                         service sshd restart > /dev/null 2>&1;
                 fi
-                userdel -f $user
                 service dropbear restart > /dev/null 2>&1;
                 j=0;
 		fi
+		
+		

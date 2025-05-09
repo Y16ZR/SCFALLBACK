@@ -1,17 +1,15 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Gemilangkinasih࿐
-# Email      » gemilangkinasih@gmail.com
-# telegram   » https://t.me/gemilangkinasih
-# whatsapp   » wa.me/+628984880039
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Gemilangkinasih࿐
-
+# ==========================================
+# Color
+RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
-
-clear
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
+# ==========================================
 data=(`find /var/log/ -name *.log`);
 for log in "${data[@]}"
 do
@@ -35,6 +33,7 @@ echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
 echo -e ""
-# notif_clearlog
 echo -e " ${GREEN} Clear Log Berhasil ${NC}"
 echo ""
+read -p "Enter Back To Menu"
+menu

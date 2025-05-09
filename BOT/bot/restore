@@ -1,13 +1,6 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Gemilangkinasih࿐
-# Email      » gemilangkinasih@gmail.com
-# telegram   » https://t.me/gemilangkinasih
-# whatsapp   » wa.me/+628984880039
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Gemilangkinasih࿐
-
+# ==========================================
+# Color
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -28,12 +21,12 @@ KEY="$KEY"
 TIME="$TIME"
 URL="$URL"
 TEXT="
-<code>━━━━━━━━━━━━━━━━━━━━</code>
-<b>RESTORE NOTIF!</b>
-<b>Detail Restore VPS Berhasil</b>
-<code>━━━━━━━━━━━━━━━━━━━━</code>
+<code>◇━━━━━━━━━━━━━━◇</code>
+<b>  ⚠️ RESTORE NOTIF⚠️</b>
+<b>     Detail Restore VPS</b>
+<code>◇━━━━━━━━━━━━━━◇</code>
 <code>Restore Vps Done</code>
-<code>━━━━━━━━━━━━━━━━━━━━</code>
+<code>◇━━━━━━━━━━━━━━◇</code>
 "
 
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
@@ -53,12 +46,25 @@ cp passwd /etc/
 cp group /etc/
 cp shadow /etc/
 cp gshadow /etc/
+cp .bot.db /etc/bot/
 cp -r kyt /var/lib/
 cp -r xray /etc/
+cp -r noobzvpns /etc/
 cp -r html /var/www/
 cp crontab /etc/
-
+cp .ssh.db /etc/ssh/
+cp .vmess.db /etc/vmess/
+cp .vless.db /etc/vless/
+cp .trojan.db /etc/trojan/
+cp -rf qt/* /etc/limit
+cp -r limit /etc/kyt/
+cp -r vmess /etc/
+cp -r trojan /etc/
+cp -r vless /etc/
 notif_restore
 rm -rf /root/backup
 rm -f backup.zip
+reset
 echo ""
+read -p "Enter Back To Menu"
+menu
