@@ -43,7 +43,7 @@ Button.inline(" 60 Day ","60")]])
 		await event.edit("`Processing... 100%\n█████████████████████████ `")
 		time.sleep(1)
 		await event.edit("`Wait.. Setting up an Account`")
-		cmd = f'printf "%s\n" "{user}" "{exp}" "{pw}" | addvless'
+		cmd = f'printf "%s\n" "{user}" "{exp}" "{pw}" | addvless-bot'
 		try:
 			a = subprocess.check_output(cmd, shell=True).decode("utf-8")
 		except:
